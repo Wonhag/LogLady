@@ -6,6 +6,6 @@ def retrieval():
 		webbrowser.open('http://www.' + next + '.com')
 		pyperclip.copy(storage[next])
 	else:
-		print "I don't know that one"
+		"""print raw_input("I don't know that one, would you like to add it? ").lower()"""
 		retrieval()
 retrieval()
