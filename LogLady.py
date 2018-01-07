@@ -1,11 +1,20 @@
 import pyperclip, subprocess, os, webbrowser
+storage = {'username':"password"}
 def retrieval():
-  storage = {'username':"password"}
   next = raw_input('my log has something to tell you: ').lower()
-	if next in storage:
-		webbrowser.open('http://www.' + next + '.com')
-		pyperclip.copy(storage[next])
-	else:
-		"""print raw_input("I don't know that one, would you like to add it? ").lower()"""
-		retrieval()
+  if next in storage:
+    webbrowser.open('http://www.' + next + '.com')
+    pyperclip.copy(storage[next])
+  else:
+    no_such_account = raw_input("I don't know that one, would you like to add it? ").lower()
+    if no_such_account == "n":
+      print "goodbye"
+      retrieval()
+    elif no_such_account == "y":
+        add()
+def add():
+  u_n = raw_input('what is the website you want to save the login info of? ')
+  password = raw_input('and it\'s password? ')
+  entry = '%s:%s' %u_n %password
+  storage.append(entry)
 retrieval()
