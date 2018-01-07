@@ -1,5 +1,5 @@
 import pyperclip, subprocess, os, webbrowser
-storage = {'username':"password"}
+storage = {}
 def retrieval():
   next = raw_input('my log has something to tell you: ').lower()
   if next in storage:
@@ -15,6 +15,6 @@ def retrieval():
 def add():
   u_n = raw_input('what is the website you want to save the login info of? ')
   password = raw_input('and it\'s password? ')
-  entry = '%s:%s' %u_n %password
-  storage.append(entry)
+  storage[u_n] = password
+  retrieval()
 retrieval()
