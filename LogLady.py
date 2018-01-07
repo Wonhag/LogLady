@@ -14,7 +14,7 @@ def retrieval():
         add()
 def add():
   u_n = raw_input('what is the website you want to save the login info of? ')
-  password = raw_input('and it\'s password? ')
+  password = raw_input('and its password? ')
   storage[u_n] = password
   retrieval()
 retrieval()
