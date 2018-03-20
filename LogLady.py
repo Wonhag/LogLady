@@ -6,7 +6,7 @@ def retrieval():
     webbrowser.open('http://www.' + next + '.com')
     pyperclip.copy(storage[next])
   else:
-    no_such_account = raw_input("I don't know that one, would you like to add it? ").lower()
+    no_such_account = raw_input("I don't know that one, would you like to add it? My log does not judge: ").lower()
     if no_such_account == "n":
       print "goodbye"
       retrieval()
