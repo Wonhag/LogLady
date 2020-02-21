@@ -3,7 +3,7 @@ storage = {}
 def retrieval():
   next = raw_input('my log has something to tell you: ').lower()
   if next in storage:
-    webbrowser.open('http://www.' + next + '.com')
+    webbrowser.open('http://www.' + next)
     pyperclip.copy(storage[next])
   else:
     no_such_account = raw_input("I don't know that one, would you like to add it? My log does not judge: ").lower()
